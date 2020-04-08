@@ -9,3 +9,10 @@ padding: 20px;
 aside {
 margin: auto;
 }
+
+p {
+text-align: center;
+font-weight: bold;
+font-size: 22px;
+text-decoration: underline;
+}
