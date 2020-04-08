@@ -1,18 +1,41 @@
 body { 
 background-color: rgba(119, 136, 153, 0.425);
+
 }
 
 .navbar {
 padding: 20px;
+padding-bottom: 40px;
+justify-content: center;
+margin-bottom: 60px;
+}
+.navbar-brand{
+font-size: 24px;
 }
 
-aside {
+/* aside {
 margin: auto;
-}
+justify-content: center;
+} */
 
 p {
 text-align: center;
 font-weight: bold;
 font-size: 22px;
 text-decoration: underline;
+}
+
+/* .card {
+    background-color: lightblue;
+
+
+} */
+
+#buttons-view {
+justify-content: center;
+margin: 20px;
+}
+
+.btn-outline-info {
+
 }
