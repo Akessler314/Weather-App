@@ -36,3 +36,23 @@ justify-content: center;
 margin: 20px;
 }
 
+#forcast {
+justify-content: center;
+padding: auto;
+}
+
+#forcastDay {
+text-align: center;
+text-decoration: underline;
+font-weight: bold;
+
+}
+
+#tomorrow {
+border: #343a40;
+border-style: solid;
+border-radius: 9px;
+margin-right: 10px;
+border-width: 4px;
+
+}
