@@ -1,10 +1,10 @@
 // standard API 
-var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=salt%20lake%20city%20&appid=dc726fd3d02ce0beabb35f8feeef04c7'
+var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=salt%20lake%20city%20&appid=dc726fd3d02ce0beabb35f8feeef04c7';
 // array to hold the searched cities 
-var cities = []
+var cities = [];
 // var to grab the date 
-var day = new Date().toDateString() 
-var tomorrow = new Date()
+var day = new Date().toDateString() ;
+var tomorrow = (new Date() +1) ;
 
 $.ajax({
     url: queryURL,
@@ -42,8 +42,32 @@ $.ajax({
     console.log(response) 
     //this is for the UV index on the current day 
     $(".UVIndex").text("UV Index: " + response.current.uvi.toFixed(1));
+    //var to hold the response for main weather, ex "clouds" "rain" "snow"  ect. for the current day 
+    var weatherMain0 = response.current.weather[0].main;
+    // if statements to change the weater icon to match the response of main weather ex "clouds" "rain" "snow"  ect. for the current day 
+    if (weatherMain0 === "Clear") {
+        $(".iconCurrent").attr("src", "assets/sun-128.png")
+     }
+     else if(weatherMain0 === "Drizzle","Clouds") {
+        $(".iconCurrent").attr("src", "assets/cloudy-128.png")
+    }
+     else if(weatherMain0 === "Rain") {
+        $(".iconCurrent").attr("src", "assets/rain-cloud-128.png")
+    } 
+     else if(weatherMain0 === "Snow") {
+        $(".iconCurrent").attr("src", "assets/snow-128.png")
+    } 
+     else if(weatherMain0 === "Thunderstorm") {
+        $(".iconCurrent").attr("src", "assets/flash-cloud-128.png")
+    } 
+    else {
+        $(".iconCurrent").attr("src", "assets/flash-cloud-128.png")
+    }
+   
 //------------------------------------------------------------------------------------------
 // 1/5 forcast 
+// var unixDtResponse = (response.daily[0].dt)  date response in unix time 
+$(".date1").text(day)
 var tempF1 = (response.daily[0].temp.day- 273.15) * 1.80 + 32;
 $(".tempF1").text("Temperature (F): " + tempF1.toFixed(1));
 var tempC1 = (response.daily[0].temp.day- 273.15);
@@ -130,3 +154,8 @@ $(".UVIndex5").text("UV Index: " + response.daily[4].uvi.toFixed(1))
         //calling the recentlySearched function 
         recentlySearched();
     });
+
+
+
+    // images free from https://www.iconfinder.com/iconsets/tiny-weather-1 
+

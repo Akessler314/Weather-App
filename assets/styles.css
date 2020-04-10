@@ -54,5 +54,10 @@ border-style: solid;
 border-radius: 9px;
 margin-right: 10px;
 border-width: 4px;
+background-color: #17a3b8a2;
 
+}
+
+img {
+justify-content: center;
 }
