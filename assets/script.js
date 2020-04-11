@@ -61,7 +61,7 @@ $.ajax({
         $(".iconCurrent").attr("src", "assets/flash-cloud-128.png")
     } 
     else {
-        $(".iconCurrent").attr("src", "assets/flash-cloud-128.png")
+        $(".iconCurrent").attr("src", "assets/rainbow-128.png")
     }
    
 //------------------------------------------------------------------------------------------
@@ -77,6 +77,24 @@ $(".wind1").text("Wind Speed: " + windMPH1.toFixed(1) + " Mph");
 $(".humidity1").text("Humidity: " + response.daily[0].humidity + "%");
 $(".UVIndex1").text("UV Index: " + response.daily[0].uvi.toFixed(1))
 
+var weatherMain1 = response.daily[0].weather[0].main;
+// if statements to change the weater icon to match the response of main weather ex "clouds" "rain" "snow"  ect. for the current day 
+if (weatherMain1 === "Clear") {
+    $(".icon1").attr("src", "assets/sun-128.png")
+ }
+ else if(weatherMain1 === "Drizzle","Clouds") {
+    $(".icon1").attr("src", "assets/cloudy-128.png")
+}
+ else if(weatherMain1 === "Rain") {
+    $(".icon1").attr("src", "assets/rain-cloud-128.png")
+} 
+ else if(weatherMain1 === "Snow") {
+    $(".icon1").attr("src", "assets/snow-128.png")
+} 
+ else if(weatherMain1 === "Thunderstorm") {
+    $(".icon1").attr("src", "assets/flash-cloud-128.png")
+} 
+
 //------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------
@@ -89,6 +107,25 @@ var windMPH1 = (response.daily[1].wind_speed * 2.237)
 $(".wind2").text("Wind Speed: " + windMPH1.toFixed(1) + " Mph");
 $(".humidity2").text("Humidity: " + response.daily[1].humidity + "%");
 $(".UVIndex2").text("UV Index: " + response.daily[1].uvi.toFixed(1))
+
+var weatherMain2 = response.daily[1].weather[0].main;
+// if statements to change the weater icon to match the response of main weather ex "clouds" "rain" "snow"  ect. for the current day 
+if (weatherMain2 === "Clear") {
+    $(".icon2").attr("src", "assets/sun-128.png")
+ }
+ else if(weatherMain2 ===  "Clouds") {
+    $(".icon2").attr("src", "assets/cloudy-128.png")
+}
+ else if(weatherMain2 === "Rain") {
+    $(".icon2").attr("src", "assets/rain-cloud-128.png")
+} 
+ else if(weatherMain2 === "Snow") {
+    $(".icon2").attr("src", "assets/snow-128.png")
+} 
+ else if(weatherMain2 === "Thunderstorm") {
+    $(".icon2").attr("src", "assets/flash-cloud-128.png")
+} 
+
 //------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------
@@ -101,6 +138,25 @@ var windMPH3 = (response.daily[2].wind_speed * 2.237)
 $(".wind3").text("Wind Speed: " + windMPH3.toFixed(1) + " Mph");
 $(".humidity3").text("Humidity: " + response.daily[2].humidity + "%");
 $(".UVIndex3").text("UV Index: " + response.daily[2].uvi.toFixed(1))
+
+var weatherMain3 = response.daily[2].weather[0].main;
+// if statements to change the weater icon to match the response of main weather ex "clouds" "rain" "snow"  ect. for the current day 
+if (weatherMain3 === "Clear") {
+    $(".icon3").attr("src", "assets/sun-128.png")
+ }
+ else if(weatherMain3 === "Clouds") {
+    $(".icon3").attr("src", "assets/cloudy-128.png")
+}
+ else if(weatherMain3 === "Rain") {
+    $(".icon3").attr("src", "assets/rain-cloud-128.png")
+} 
+ else if(weatherMain3 === "Snow") {
+    $(".icon3").attr("src", "assets/snow-128.png")
+} 
+ else if(weatherMain3 === "Thunderstorm") {
+    $(".icon3").attr("src", "assets/flash-cloud-128.png")
+} 
+
 //------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------
@@ -113,6 +169,25 @@ var windMPH4 = (response.daily[3].wind_speed * 2.237)
 $(".wind4").text("Wind Speed: " + windMPH4.toFixed(1) + " Mph");
 $(".humidity4").text("Humidity: " + response.daily[3].humidity + "%");
 $(".UVIndex4").text("UV Index: " + response.daily[3].uvi.toFixed(1))
+
+var weatherMain4 = response.daily[3].weather[0].main;
+// if statements to change the weater icon to match the response of main weather ex "clouds" "rain" "snow"  ect. for the current day 
+if (weatherMain4 === "Clear") {
+    $(".icon4").attr("src", "assets/sun-128.png")
+ }
+ else if(weatherMain4 === "Clouds") {
+    $(".icon4").attr("src", "assets/cloudy-128.png")
+}
+ else if(weatherMain4 === "Rain") {
+    $(".icon4").attr("src", "assets/rain-cloud-128.png")
+} 
+ else if(weatherMain4 === "Snow") {
+    $(".icon4").attr("src", "assets/snow-128.png")
+} 
+ else if(weatherMain4 === "Thunderstorm") {
+    $(".icon4").attr("src", "assets/flash-cloud-128.png")
+} 
+
 //------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------
@@ -125,6 +200,25 @@ var windMPH5 = (response.daily[4].wind_speed * 2.237)
 $(".wind5").text("Wind Speed: " + windMPH5.toFixed(1) + " Mph");
 $(".humidity5").text("Humidity: " + response.daily[4].humidity + "%");
 $(".UVIndex5").text("UV Index: " + response.daily[4].uvi.toFixed(1))
+
+var weatherMain5 = response.daily[4].weather[0].main;
+// if statements to change the weater icon to match the response of main weather ex "clouds" "rain" "snow"  ect. for the current day 
+if (weatherMain5 === "Clear") {
+    $(".icon5").attr("src", "assets/sun-128.png")
+ }
+ else if(weatherMain5 === "Clouds") {
+    $(".icon5").attr("src", "assets/cloudy-128.png")
+}
+ else if(weatherMain5 === "Rain") {
+    $(".icon5").attr("src", "assets/rain-cloud-128.png")
+} 
+ else if(weatherMain5 === "Snow") {
+    $(".icon5").attr("src", "assets/snow-128.png")
+} 
+ else if(weatherMain5 === "Thunderstorm") {
+    $(".icon5").attr("src", "assets/flash-cloud-128.png")
+} 
+
 //------------------------------------------------------------------------------------------
 
 
