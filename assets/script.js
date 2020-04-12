@@ -10,7 +10,7 @@ var latLS = localStorage.getItem("lat")
 
 // standard API 
 var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + "taylorsville" + '&appid=dc726fd3d02ce0beabb35f8feeef04c7';
-// this version should get the city from local storage and use that but is not working 
+// this version should get the city from local storage and use that but is not working -- leaving it set to taylorsville so the website functions 
 // var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + "cityLS" + '&appid=dc726fd3d02ce0beabb35f8feeef04c7';
 
 $.ajax({
