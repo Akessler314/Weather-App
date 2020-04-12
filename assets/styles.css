@@ -1,6 +1,7 @@
 body { 
 background-color: rgba(119, 136, 153, 0.425);
-
+max-width: auto;
+max-height: auto;
 }
 
 .navbar {
@@ -61,3 +62,4 @@ background-color: #17a3b8a2;
 img {
 justify-content: center;
 }
+
